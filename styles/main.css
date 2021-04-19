@@ -1,0 +1,266 @@
+/*Master Styles */
+body {
+	font-family: "Raleway", sans-serif;
+	margin: 0px;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+/*Navigation Styles */
+.nav-wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 38px;
+}
+
+.left-side{
+	display: flex;
+}
+
+.nav-wrapper > .left-side > div{
+	margin-right: 20px;
+	font-size: 0.9em;
+	text-transform: uppercase;
+}
+
+.nav-link-wrapper{
+	height: 22px;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+	color: #8a8a8a;
+	text-decoration: none;
+	transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+	border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover {
+	color:black;
+}
+
+.active-nav-link{
+	border-bottom: 1px solid black;
+}
+
+.active-nav-link a{
+	color: black !important;
+}
+
+/*Portfolio Styles */
+
+.portfolio-items-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr; /*3 columns */
+}
+
+.portfolio-item-wrapper {
+	position: relative;
+}
+
+.portfolio-img-background {
+	height: 350px;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+	position: absolute;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	text-align: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.logo-wrapper img{
+	width: 50%;
+	margin-bottom: 10px;
+}
+
+.img-text-wrapper .subtitle {
+	transition: 1s;
+	font-weight: 600;
+	color: transparent;
+}
+.img-text-wrapper:hover .subtitle {
+	font-weight: 600;
+	color: lightseagreen;
+}
+
+.img-darken {
+	transition: 1s;
+	filter: brightness(10%);
+}
+
+.img-brighten {
+	transition: 1s;
+	filter: brightness(100%);
+}
+
+/* About page */
+.profile-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	padding-top:100px;
+	padding-right:350px;
+}
+
+.profile-image-wrapper img {
+	width: 100%;
+}
+
+.profile-text-wrapper {
+	align-items: center;
+	padding-left: 350px;
+	padding-right: 50px;
+}
+
+.profile-text-wrapper h1 {
+	font-family: "Lobster", sans-serif;
+	color:lightskyblue;
+}
+
+.social-media-wrapper{
+	display:flex;
+	padding-top: 50px;
+	padding-left: 150px;
+}
+
+.social-media-wrapper img{
+	padding-left: 25px;
+}
+
+/* Gym page */
+.title-wrapper{
+	display:grid;
+	font-family: "Lobster", sans-serif;
+	font-size: 24px;
+	color:lightskyblue;
+	align-items: center;
+	justify-content: center;
+}
+
+.ar-gym-content-wrapper{
+	justify-content: center;
+	align-items: center;
+}
+
+.ar-gym-text-wrapper{
+	font-family: "Raleway", sans-serif;
+	font-size: 24px;
+	padding-left:150px;
+	padding-right: 100px;
+}
+
+.ar-gym-text-wrapper a{
+	color: blue;
+} 
+
+.ar-gym-img-wrapper{
+	padding-right:50px;
+}
+
+/* Slideshow */
+* {
+	box-sizing: border-box;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .slideshow-container {
+	position: relative;
+	width: 80%;
+	padding-left: 450px;
+  }
+  
+  /* Hide the images by default */
+  .slides {
+	display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+	cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	width: auto;
+	padding: 16px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertxt {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-wrapper {
+	text-align: center;
+	background-color: #222;
+	padding: 2px 16px;
+	color: white;
+  }
+  
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+	float: left;
+	width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+	opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+	opacity: 1;
+  }

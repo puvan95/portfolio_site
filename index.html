@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<!--
+	a is for links
+	classes can be used mutliple types unlike id
+	There is ul and ol, ul is bullet point and ol is numbered
+-->
+
+
+<html>
+	<head>
+		<title>The Unknown Artist</title>
+		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+		<link href="./styles/main.css" rel="stylesheet" type="text/css"/>
+	</head>
+	
+	<body>
+		<div class="container">
+
+			<div class="nav-wrapper">
+
+				<div class="left-side">
+
+					<div class="nav-link-wrapper active-nav-link">
+						<a href="index.html">Home</a>
+					</div>
+
+					<div class="nav-link-wrapper">
+						<a href="about.html">About</a>
+					</div>
+					
+				</div>
+
+				<div class="right-side">
+
+					<div class="brand">
+						<div>PUVAN</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="content-wrapper">
+				<div class="portfolio-items-wrapper">
+
+					<!-- Image 1 -->
+					<div class="portfolio-item-wrapper">
+						<div class="portfolio-img-background" style="background-image:url(images/portfolio1.jpg)">
+						</div>
+
+						<div class="img-text-wrapper">
+							<div class="logo-wrapper">
+								<a href = "gym.html">
+									<img src="images/logos/AR_App_icon.png" alt = "AR_App_icon">
+								</a>
+							</div>
+
+							<div class="subtitle">
+								A mobile application to help gym beginners using Augmented Reality. 
+							</div>
+						</div>
+					</div>
+
+					<!-- Image 2 -->
+					<div class="portfolio-item-wrapper">
+						<div class="portfolio-img-background" style="background-image:url(images/portfolio2.jpg)">
+						</div>
+
+						<div class="img-text-wrapper">
+							<div class="logo-wrapper">
+								<img src="images/logos/tic-tac-toe.png" alt = "tic-tac-toe">
+							</div>
+
+							<div class="subtitle">
+								A classic game of Tic Tac Toe for 2 players.
+							</div>
+						</div>
+					</div>
+
+					<!-- Image 3 -->
+					<div class="portfolio-item-wrapper">
+						<div class="portfolio-img-background" style="background-image:url(images/portfolio3.jpg)">
+						</div>
+
+						<div class="img-text-wrapper">
+							<div class="logo-wrapper">
+								<img src="images/logos/dashtrack.png" alt = "arms">
+							</div>
+
+							<div class="subtitle">
+								Random text #3. I wanted this to be a placeholder but its weird.
+							</div>
+						</div>
+					</div>
+
+					<!-- Image 4 -->
+					<div class="portfolio-item-wrapper">
+						<div class="portfolio-img-background" style="background-image:url(images/portfolio4.jpg)">
+						</div>
+
+						<div class="img-text-wrapper">
+							<div class="logo-wrapper">
+								<img src="images/logos/devcamp.png" alt = "dumbbell">
+							</div>
+
+							<div class="subtitle">
+								Random text #4. I wanted this to be a placeholder but its weird.
+							</div>
+						</div>
+					</div>
+
+					<!-- Image 5 -->
+					<div class="portfolio-item-wrapper">
+						<div class="portfolio-img-background" style="background-image:url(images/portfolio5.jpg)">
+						</div>
+
+						<div class="img-text-wrapper">
+							<div class="logo-wrapper">
+								<img src="images/logos/edutechional.png" alt = "dumbbell">
+							</div>
+
+							<div class="subtitle">
+								Random text #5. I wanted this to be a placeholder but its weird.
+							</div>
+						</div>
+					</div>
+
+					<!-- Image 6 -->
+					<div class="portfolio-item-wrapper">
+						<div class="portfolio-img-background" style="background-image:url(images/portfolio6.jpg)">
+						</div>
+
+						<div class="img-text-wrapper">
+							<div class="logo-wrapper">
+								<img src="images/logos/open-devos.png" alt = "dumbbell">
+							</div>
+
+							<div class="subtitle">
+								Random text #6. I wanted this to be a placeholder but its weird.
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</body>
+	
+	<script>
+		const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+		portfolioItems.forEach(portfolioItem => {
+			portfolioItem.addEventListener('mouseover', () => {
+				portfolioItem.childNodes[1].classList.remove('img-brighten');
+				portfolioItem.childNodes[1].classList.add('img-darken');	
+			})
+		})
+
+		portfolioItems.forEach(portfolioItem => {
+			portfolioItem.addEventListener('mouseout', () => {
+				portfolioItem.childNodes[1].classList.remove('img-darken');
+				portfolioItem.childNodes[1].classList.add('img-brighten');
+			})
+		})
+
+	</script>
+
+</html>
