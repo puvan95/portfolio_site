@@ -116,18 +116,17 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items:center;
-	padding-top:100px;
-	padding-right:350px;
+	margin: 10em 10em 0em 0em;
 }
 
 .profile-image-wrapper img {
 	width: 100%;
+	margin-right: 10em;
 }
 
 .profile-text-wrapper {
 	align-items: center;
-	padding-left: 350px;
-	padding-right: 50px;
+	margin-left: 15em;
 }
 
 .profile-text-wrapper h1 {
@@ -135,14 +134,19 @@ body {
 	color:lightskyblue;
 }
 
+.profile-text-wrapper p{
+	padding-right: 8em;
+	word-wrap: normal;
+}
+
 .social-media-wrapper{
 	display:flex;
-	padding-top: 50px;
+	padding-top: 25px;
 	padding-left: 150px;
 }
 
-.social-media-wrapper img{
-	padding-left: 25px;
+.social-media-icons-wrapper{
+	padding: 10px;
 }
 
 /* Gym page */
@@ -200,6 +204,7 @@ body {
   /* Next & previous buttons */
   .prev,
   .next {
+	background-color: rgba(0, 0, 0, 0.5);
 	cursor: pointer;
 	position: absolute;
 	top: 40%;
@@ -208,7 +213,7 @@ body {
 	margin-top: -50px;
 	color: white;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 15px;
 	border-radius: 0 3px 3px 0;
 	user-select: none;
 	-webkit-user-select: none;
@@ -229,6 +234,7 @@ body {
   /* Number text (1/3 etc) */
   .numbertxt {
 	color: #f2f2f2;
+	background-color: rgba(0, 0, 0, 0.3);
 	font-size: 12px;
 	padding: 8px 12px;
 	position: absolute;
