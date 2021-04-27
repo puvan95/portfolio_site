@@ -7,7 +7,7 @@
 		<title>AR Gym</title>
 		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-		<link href="./styles/main.css" rel="stylesheet" type="text/css"/>
+		<link href="./styles/gym.css" rel="stylesheet"/>
 	</head>
 	
 	<body>
@@ -53,89 +53,83 @@
 					</p>
 
 				</div>
+				
+				<!--start of slideshow-->
+				<div class="slideshow">
+					
+					<div class="slideshow-item">
+						<img src="images/AR Gym/ar_gym_1.png" alt="home-screen">
+						<div class="slideshow-item-text">
+							<h5>Launch Screen</h5>
+						</div>
+					</div>
 
-				<div class="slideshow-container">
-					<!--Slideshow-->
-					<div class="Slides">
-						<div class="numbertxt">
-							1 / 6
+					<div class="slideshow-item">
+						<img src="images/AR Gym/ar_gym_2.png" alt="login-screen">
+						<div class="slideshow-item-text">
+							<h5>Login Screen</h5>
 						</div>
-						<img src="images/AR Gym/ar_gym.png" style="width: 100%;">
 					</div>
+
+					<div class="slideshow-item">
+						<img src="images/AR Gym/ar_gym_3.png" alt="ar-camera">
+						<div class="slideshow-item-text">
+							<h5>AR Camera</h5>
+						</div>
+					</div>
+
+					<div class="slideshow-item">
+						<img src="images/AR Gym/ar_gym_4.png" alt="home-page">
+						<div class="slideshow-item-text">
+							<h5>Home Page</h5>
+						</div>
+					</div>
+
+					<div class="slideshow-item">
+						<img src="images/AR Gym/ar_gym_5.png" alt="routines-page">
+						<div class="slideshow-item-text">
+							<h5>Routines Page</h5>
+						</div>
+					</div>
+
+					<div class="slideshow-item">
+						<img src="images/AR Gym/ar_gym_6.png" alt="routines-beginner">
+						<div class="slideshow-item-text">
+							<h5>Beginner Routines</h5>
+						</div>
+					</div>
+
+					<div class="slideshow-item">
+						<img src="images/AR Gym/ar_gym_7.png" alt="demo-page">
+						<div class="slideshow-item-text">
+							<h5>Video Demonstrations</h5>
+						</div>
+					</div>
+
+					<div class="slideshow-item">
+						<img src="images/AR Gym/ar_gym_8.png" alt="demo-chest">
+						<div class="slideshow-item-text">
+							<h5>Chest Demonstrations</h5>
+						</div>
+					</div>
+
+					<div class="slideshow-item">
+						<img src="images/AR Gym/ar_gym_9.png" alt="demo-pushup">
+						<div class="slideshow-item-text">
+							<h5>Pushup Demonstration</h5>
+						</div>
+					</div>
+
+					<div class="slideshow-item">
+						<img src="images/AR Gym/ar_gym_10.png" alt="nav-menu">
+						<div class="slideshow-item-text">
+							<h5>Navigation Sidebar</h5>
+						</div>
+					</div>
+
 					
-					<div class="slides">
-						<div class="numbertxt">
-							2 / 6
-						</div>
-						<img src="images/portfolio2.jpg" style="width: 100%;">
-					</div>
-					
-					<div class="Slides">
-						<div class="numbertxt">
-							3 / 6
-						</div>
-						<img src="images/portfolio3.jpg" style="width: 100%;">
-					</div>
-		
-					<div class="Slides">
-						<div class="numbertxt">
-							4 / 6
-						</div>
-						<img src="images/portfolio4.jpg" style="width: 100%;">
-					</div>
-					
-					<div class="Slides">
-						<div class="numbertxt">
-							5 / 6
-						</div>
-						<img src="images/portfolio5.jpg" style="width: 100%;">
-					</div>
-					
-					<div class="Slides">
-						<div class="numbertxt">
-							6 / 6
-						</div>
-						<img src="images/portfolio6.jpg" style="width: 100%;">
-					</div>
-		
-					<!--Arrows-->
-					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-					  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-					
-					<div class="caption-wrapper">
-						<p id ="caption"></p>
-					</div>
-		
-					<!--Thumnails-->
-					<div class="row">
-						<div class="column">
-						  <img class="demo cursor" src="images/AR Gym/ar_gym.png" style="width:100%" onclick="currentSlide(1)" alt="Bench Press">
-						</div>
-		
-						<div class="column">
-						  <img class="demo cursor" src="images/portfolio2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-						</div>
-		
-						<div class="column">
-						  <img class="demo cursor" src="images/portfolio3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-						</div>
-		
-						<div class="column">
-						  <img class="demo cursor" src="images/portfolio4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-						</div>
-		
-						<div class="column">
-						  <img class="demo cursor" src="images/portfolio5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-						</div>
-		
-						<div class="column">
-						  <img class="demo cursor" src="images/portfolio6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-						</div>
-		
-					</div> <!--End of slideshow-->
-		
 				</div>
-				<!--end of pictures-->
+				<!--end of slideshow-->
 
 			</div>
 
@@ -143,36 +137,8 @@
 	</body>
 	
 	<script>
-		var slideIndex = 1;
-		showSlides(slideIndex);
+		
 
-		// Next/previous controls
-		function plusSlides(n) {
-			showSlides(slideIndex += n);
-		}
-
-		// Thumbnail image controls
-		function currentSlide(n) {
-			showSlides(slideIndex = n);
-		}
-
-		function showSlides(n) {
-			var i;
-			var slides = document.getElementsByClassName("Slides");
-			var dots = document.getElementsByClassName("demo");
-			var captionText = document.getElementById("caption");
-			if (n > slides.length) {slideIndex = 1}
-			if (n < 1) {slideIndex = slides.length}
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-			}
-			for (i = 0; i < dots.length; i++) {
-				dots[i].className = dots[i].className.replace(" active", "");
-			}
-			slides[slideIndex-1].style.display = "block";
-			dots[slideIndex-1].className += " active";
-			captionText.innerHTML = dots[slideIndex-1].alt;
-		}
 	</script>
 
 

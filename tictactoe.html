@@ -7,7 +7,7 @@
 		<title>Tic-Tac-Toe</title>
 		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-		<link href="./styles/main.css" rel="stylesheet" type="text/css"/>
+		<link href="./styles/tictactoe.css" rel="stylesheet"/>
 	</head>
 	
 	<body>
@@ -35,8 +35,8 @@
 				<h1>Tic-Tac-Toe</h1>
 			</div>
 
-			<div class = "ar-gym-content-wrapper"> <!--main wrapper-->
-				<div class = "ar-gym-text-wrapper">
+			<div class = "tictactoe-content-wrapper"> <!--main wrapper-->
+				<div class = "tictactoe-text-wrapper">
 					<p>
 						A simple 2-player Tic-Tac-Toe game in which users can take turn entering a number from 1-9 to choose where their X or O should be placed. The game also has an additional feature allowing the players to increase the size of the board. For example, instead of a normal 3x3 board, players can play the game on a 5x5 board. However, the condition of 3 in a row still applies to win the game.
 					</p>
@@ -52,127 +52,50 @@
 
 				</div>
 
-				<div class="slideshow-container">
-					<!--Slideshow-->
-					<div class="Slides">
-						<div class="numbertxt">
-							1 / 6
+				<!--start of slideshow-->
+				<div class="slideshow">
+					
+					<div class="slideshow-item">
+						<img src="images/Screenshots/Tictactoe app/s1.PNG" alt="start-screen">
+						<div class="slideshow-item-text">
+							<h5>Entering Names</h5>
 						</div>
-						<img src="images/portfolio1.jpg" style="width: 100%;">
+					</div>
+
+					<div class="slideshow-item">
+						<img src="images/Screenshots/Tictactoe app/s2.PNG" alt="board-size">
+						<div class="slideshow-item-text">
+							<h5>Normal Board</h5>
+						</div>
+					</div>
+
+					<div class="slideshow-item">
+						<img src="images/Screenshots/Tictactoe app/s3.PNG" alt="first-turn">
+						<div class="slideshow-item-text">
+							<h5>Turn by Turn</h5>
+						</div>
+					</div>
+
+					<div class="slideshow-item">
+						<img src="images/Screenshots/Tictactoe app/s4.PNG" alt="end-game">
+						<div class="slideshow-item-text">
+							<h5>End Game</h5>
+						</div>
+					</div>
+
+					<div class="slideshow-item">
+						<img src="images/Screenshots/Tictactoe app/s5.PNG" alt="other-board">
+						<div class="slideshow-item-text">
+							<h5>Bigger Boards</h5>
+						</div>
 					</div>
 					
-					<div class="slides">
-						<div class="numbertxt">
-							2 / 6
-						</div>
-						<img src="images/portfolio2.jpg" style="width: 100%;">
-					</div>
-					
-					<div class="Slides">
-						<div class="numbertxt">
-							3 / 6
-						</div>
-						<img src="images/portfolio3.jpg" style="width: 100%;">
-					</div>
-		
-					<div class="Slides">
-						<div class="numbertxt">
-							4 / 6
-						</div>
-						<img src="images/portfolio4.jpg" style="width: 100%;">
-					</div>
-					
-					<div class="Slides">
-						<div class="numbertxt">
-							5 / 6
-						</div>
-						<img src="images/portfolio5.jpg" style="width: 100%;">
-					</div>
-					
-					<div class="Slides">
-						<div class="numbertxt">
-							6 / 6
-						</div>
-						<img src="images/portfolio6.jpg" style="width: 100%;">
-					</div>
-		
-					<!--Arrows-->
-					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-					  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-					
-					<div class="caption-wrapper">
-						<p id ="caption"></p>
-					</div>
-		
-					<!--Thumnails-->
-					<div class="row">
-						<div class="column">
-						  <img class="demo cursor" src="images/portfolio1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Image 1">
-						</div>
-		
-						<div class="column">
-						  <img class="demo cursor" src="images/portfolio2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-						</div>
-		
-						<div class="column">
-						  <img class="demo cursor" src="images/portfolio3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-						</div>
-		
-						<div class="column">
-						  <img class="demo cursor" src="images/portfolio4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-						</div>
-		
-						<div class="column">
-						  <img class="demo cursor" src="images/portfolio5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-						</div>
-		
-						<div class="column">
-						  <img class="demo cursor" src="images/portfolio6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-						</div>
-		
-					</div> <!--End of slideshow-->
-		
 				</div>
-				<!--end of pictures-->
+				<!--end of slideshow-->
 
 			</div>
 
 		</div>
 	</body>
-	
-	<script>
-		var slideIndex = 1;
-		showSlides(slideIndex);
-
-		// Next/previous controls
-		function plusSlides(n) {
-			showSlides(slideIndex += n);
-		}
-
-		// Thumbnail image controls
-		function currentSlide(n) {
-			showSlides(slideIndex = n);
-		}
-
-		function showSlides(n) {
-			var i;
-			var slides = document.getElementsByClassName("Slides");
-			var dots = document.getElementsByClassName("demo");
-			var captionText = document.getElementById("caption");
-			if (n > slides.length) {slideIndex = 1}
-			if (n < 1) {slideIndex = slides.length}
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-			}
-			for (i = 0; i < dots.length; i++) {
-				dots[i].className = dots[i].className.replace(" active", "");
-			}
-			slides[slideIndex-1].style.display = "block";
-			dots[slideIndex-1].className += " active";
-			captionText.innerHTML = dots[slideIndex-1].alt;
-		}
-	</script>
-
-
 
 </html>

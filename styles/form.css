@@ -1,0 +1,188 @@
+/*Master Styles */
+body {
+	font-family: "Raleway", sans-serif;
+	margin: 0px;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+/*Navigation Styles */
+.nav-wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 38px;
+}
+
+.left-side{
+	display: flex;
+}
+
+.nav-wrapper > .left-side > div{
+	margin-right: 20px;
+	font-size: 0.9em;
+	text-transform: uppercase;
+}
+
+.nav-link-wrapper{
+	height: 22px;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+	color: #8a8a8a;
+	text-decoration: none;
+	transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+	border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover {
+	color:black;
+}
+
+.active-nav-link{
+	border-bottom: 1px solid black;
+}
+
+.active-nav-link a{
+	color: black !important;
+}
+
+/* Gym page */
+.title-wrapper{
+	display:grid;
+	font-family: "Lobster", sans-serif;
+	font-size: 24px;
+	color:lightskyblue;
+	align-items: center;
+	justify-content: center;
+}
+
+.form-content-wrapper{
+	justify-content: center;
+	align-items: center;
+}
+
+.form-text-wrapper{
+	font-family: "Raleway", sans-serif;
+	font-size: 24px;
+	padding-left:150px;
+	padding-right: 100px;
+}
+
+.form-text-wrapper a{
+	color: blue;
+} 
+
+/* Slideshow */
+.slideshow{
+	background-color: black;
+	width: 800px;
+	height: 1000px;
+	margin: 5rem 10rem 5rem 35rem;
+	position: relative;
+	overflow: hidden;
+}
+
+.slideshow-item{
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	opacity: 0;
+	animation: cycleImages 21s infinite;
+}
+
+.slideshow-item:nth-child(1){
+	animation-delay: 0s;
+}
+
+.slideshow-item:nth-child(2){
+	animation-delay: 5s;
+}
+
+.slideshow-item:nth-child(3){
+	animation-delay: 15s;
+}
+
+.slideshow-item:nth-child(4){
+	animation-delay: 20s;
+}
+
+.slideshow-item-text{
+	max-width: 100%;
+	position: absolute;
+	top:50%;
+	right:0;
+	transform: translateY(-50%);
+	background-color: rgba(0,0,0,.8);
+	color: white;
+	padding: 1rem 2rem;
+}
+
+.slideshow-item-text h5{
+	font-size: 1.5rem;
+	font-family: "Raleway", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+@keyframes cycleImages {
+	25%{
+		opacity: 1;
+	}
+	40%{
+		opacity: 0;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	.nav-wrapper{
+		font-size: 2rem;
+	}
+
+	.title-wrapper{
+		font-size: 3rem;	
+	}
+
+	.form-text-wrapper {
+		font-size: 2rem;
+	}
+
+	.slideshow-item-text{
+		max-width:70%;
+		padding: 1rem 1rem;
+	}
+
+	.slideshow-item-text h5{
+		font-size: 2rem;
+	}
+}
+
+@media screen and (max-width: 767px){
+	
+	.title-wrapper{
+		font-size: 5rem;	
+	}
+
+	.form-text-wrapper {
+		font-size: 2rem;
+	}
+
+	.slideshow-item-text{
+		max-width:100%;
+		padding: 4rem;
+		top: initial;
+		bottom: 0;
+		transform: initial;
+	}
+
+	.slideshow-item-text h5{
+		font-size: 2rem;
+	}
+}

@@ -7,7 +7,7 @@
 		<title>Chat App</title>
 		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-		<link href="./styles/main.css" rel="stylesheet" type="text/css"/>
+		<link href="./styles/chat.css" rel="stylesheet" />
 	</head>
 	
 	<body>
@@ -35,8 +35,8 @@
 				<h1>Chat App</h1>
 			</div>
 
-			<div class = "ar-gym-content-wrapper"> <!--main wrapper-->
-				<div class = "ar-gym-text-wrapper">
+			<div class = "chat-content-wrapper"> <!--main wrapper-->
+				<div class = "chat-text-wrapper">
 					<p>
 						A simple chat application where the user can chat with other users. The users are added in the ChatEngine website such that the admin can manually add which user can interact in a specific chat group. It was developed using ChatEngine, ReactJS Framework, HTML, CSS and Javascript.
 					</p>
@@ -48,106 +48,42 @@
 
 				</div>
 
-				<div class="slideshow-container">
-					<!--Slideshow-->
-					<div class="Slides">
-						<div class="numbertxt">
-							1 / 4
-						</div>
-						<img src="images/Screenshots/Chat app/s1.PNG" style="width: 100%;">
-					</div>
+				<!--start of slideshow-->
+				<div class="slideshow">
 					
-					<div class="slides">
-						<div class="numbertxt">
-							2 / 4
+					<div class="slideshow-item">
+						<img src="images/Screenshots/Chat app/s1.png" alt="login-page">
+						<div class="slideshow-item-text">
+							<h5>Login Page</h5>
 						</div>
-						<img src="images/Screenshots/Chat app/s2.PNG" style="width: 100%;">
 					</div>
-					
-					<div class="Slides">
-						<div class="numbertxt">
-							3 / 4
-						</div>
-						<img src="images/Screenshots/Chat app/s3.PNG" style="width: 100%;">
-					</div>
-		
-					<div class="Slides">
-						<div class="numbertxt">
-							4 / 4
-						</div>
-						<img src="images/Screenshots/Chat app/s4.PNG" style="width: 100%;">
-					</div>
-		
-					<!--Arrows-->
-					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-					  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-					
-					<div class="caption-wrapper">
-						<p id ="caption"></p>
-					</div>
-		
-					<!--Thumnails-->
-					<div class="row">
-						<div class="column">
-						  <img class="demo cursor" src="images/Screenshots/Chat app/s1.PNG" style="width:100%" onclick="currentSlide(1)" alt="Image 1">
-						</div>
-		
-						<div class="column">
-						  <img class="demo cursor" src="images/Screenshots/Chat app/s2.PNG" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-						</div>
-		
-						<div class="column">
-						  <img class="demo cursor" src="images/Screenshots/Chat app/s3.PNG" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-						</div>
-		
-						<div class="column">
-						  <img class="demo cursor" src="images/Screenshots/Chat app/s4.PNG" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-						</div>
 
-		
-					</div> <!--End of slideshow-->
-		
+					<div class="slideshow-item">
+						<img src="images/Screenshots/Chat app/s2.png" alt="chat-page">
+						<div class="slideshow-item-text">
+							<h5>Chat Page</h5>
+						</div>
+					</div>
+
+					<div class="slideshow-item">
+						<img src="images/Screenshots/Chat app/s3.png" alt="messaging">
+						<div class="slideshow-item-text">
+							<h5>Messaging</h5>
+						</div>
+					</div>
+
+					<div class="slideshow-item">
+						<img src="images/Screenshots/Chat app/s4.png" alt="img-attachment">
+						<div class="slideshow-item-text">
+							<h5>Sending Images</h5>
+						</div>
+					</div>
+					
 				</div>
-				<!--end of pictures-->
+				<!--end of slideshow-->
 
 			</div>
 
 		</div>
 	</body>
-	
-	<script>
-		var slideIndex = 1;
-		showSlides(slideIndex);
-
-		// Next/previous controls
-		function plusSlides(n) {
-			showSlides(slideIndex += n);
-		}
-
-		// Thumbnail image controls
-		function currentSlide(n) {
-			showSlides(slideIndex = n);
-		}
-
-		function showSlides(n) {
-			var i;
-			var slides = document.getElementsByClassName("Slides");
-			var dots = document.getElementsByClassName("demo");
-			var captionText = document.getElementById("caption");
-			if (n > slides.length) {slideIndex = 1}
-			if (n < 1) {slideIndex = slides.length}
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-			}
-			for (i = 0; i < dots.length; i++) {
-				dots[i].className = dots[i].className.replace(" active", "");
-			}
-			slides[slideIndex-1].style.display = "block";
-			dots[slideIndex-1].className += " active";
-			captionText.innerHTML = dots[slideIndex-1].alt;
-		}
-	</script>
-
-
-
 </html>

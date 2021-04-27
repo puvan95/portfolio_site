@@ -7,7 +7,7 @@
 		<title>Form App</title>
 		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-		<link href="./styles/main.css" rel="stylesheet" type="text/css"/>
+		<link href="./styles/form.css" rel="stylesheet"/>
 	</head>
 	
 	<body>
@@ -35,8 +35,8 @@
 				<h1>Form App</h1>
 			</div>
 
-			<div class = "ar-gym-content-wrapper"> <!--main wrapper-->
-				<div class = "ar-gym-text-wrapper">
+			<div class = "form-content-wrapper"> <!--main wrapper-->
+				<div class = "form-text-wrapper">
 					<p>
 						A simple form application where the user is asked to submit a few details about themselves and is later shown in a neater way at the bottom of the page. It was developed using the ReactJS Framework, HTML, CSS and Javascript.
 					</p>
@@ -48,105 +48,43 @@
 
 				</div>
 
-				<div class="slideshow-container">
-					<!--Slideshow-->
-					<div class="Slides">
-						<div class="numbertxt">
-							1 / 4
+				<!--start of slideshow-->
+				<div class="slideshow">
+					
+					<div class="slideshow-item">
+						<img src="images/Screenshots/Form App/s1.PNG" alt="form-page">
+						<div class="slideshow-item-text">
+							<h5>Form Page</h5>
 						</div>
-						<img src="images/Screenshots/Form App/s1.PNG" style="width: 100%;">
+					</div>
+
+					<div class="slideshow-item">
+						<img src="images/Screenshots/Form App/s2.PNG" alt="details-page">
+						<div class="slideshow-item-text">
+							<h5>Details</h5>
+						</div>
+					</div>
+
+					<div class="slideshow-item">
+						<img src="images/Screenshots/Form App/s3.PNG" alt="form-input">
+						<div class="slideshow-item-text">
+							<h5>Entering Input</h5>
+						</div>
+					</div>
+
+					<div class="slideshow-item">
+						<img src="images/Screenshots/Form App/s4.PNG" alt="details-output">
+						<div class="slideshow-item-text">
+							<h5>Details Output</h5>
+						</div>
 					</div>
 					
-					<div class="slides">
-						<div class="numbertxt">
-							2 / 4 
-						</div>
-						<img src="images/Screenshots/Form App/s2.PNG" style="width: 100%;">
-					</div>
-					
-					<div class="Slides">
-						<div class="numbertxt">
-							3 / 4
-						</div>
-						<img src="images/Screenshots/Form App/s3.PNG" style="width: 100%;">
-					</div>
-		
-					<div class="Slides">
-						<div class="numbertxt">
-							4 / 4
-						</div>
-						<img src="images/Screenshots/Form App/s4.PNG" style="width: 100%;">
-					</div>
-		
-					<!--Arrows-->
-					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-					<a class="next" onclick="plusSlides(1)">&#10095;</a>
-					
-					<div class="caption-wrapper">
-						<p id ="caption"></p>
-					</div>
-		
-					<!--Thumnails-->
-					<div class="row">
-						<div class="column">
-						  <img class="demo cursor" src="images/Screenshots/Form App/s1.PNG" style="width:100%" onclick="currentSlide(1)" alt="Image 1">
-						</div>
-		
-						<div class="column">
-						  <img class="demo cursor" src="images/Screenshots/Form App/s2.PNG" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-						</div>
-		
-						<div class="column">
-						  <img class="demo cursor" src="images/Screenshots/Form App/s3.PNG" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-						</div>
-		
-						<div class="column">
-						  <img class="demo cursor" src="images/Screenshots/Form App/s4.PNG" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-						</div>
-		
-					</div> <!--End of slideshow-->
-		
 				</div>
-				<!--end of pictures-->
+				<!--end of slideshow-->
 
 			</div>
 
 		</div>
 	</body>
 	
-	<script>
-		var slideIndex = 1;
-		showSlides(slideIndex);
-
-		// Next/previous controls
-		function plusSlides(n) {
-			showSlides(slideIndex += n);
-		}
-
-		// Thumbnail image controls
-		function currentSlide(n) {
-			showSlides(slideIndex = n);
-		}
-
-		function showSlides(n) {
-			var i;
-			var slides = document.getElementsByClassName("Slides");
-			var dots = document.getElementsByClassName("demo");
-			var captionText = document.getElementById("caption");
-			if (n > slides.length) {slideIndex = 1}
-			if (n < 1) {slideIndex = slides.length}
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-			}
-			for (i = 0; i < dots.length; i++) {
-				dots[i].className = dots[i].className.replace(" active", "");
-			}
-			slides[slideIndex-1].style.display = "block";
-			dots[slideIndex-1].className += " active";
-			captionText.innerHTML = dots[slideIndex-1].alt;
-		}
-	</script>
-
-
-
 </html>
